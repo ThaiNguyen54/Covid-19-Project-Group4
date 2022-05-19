@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="assets/css/fontawsom-all.min.css">
     <link rel="stylesheet" href="assets/css/animate.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 </head>
 
 <body>
@@ -80,77 +81,186 @@
          <!-- ######## Page  Title End ####### -->
     
 
-   
- <section class="key-features kf-2">
-        <div class="container">
-            <div class="inner-title">
+   <!--  ************************* Registration form Starts Here ************************** -->
+   <section class="Registrationbody">
+   <div class="Registrationcontainer">
+    <resheader>Registration</resheader>
 
-                <h2>Our Key Features</h2>
-                <p>Take a look at some of our key features</p>
-            </div>
+    <form action="#">
+        <div class="form first">
+            <div class="details personal">
+                <span class="title">Personal Details</span>
 
-            <div class="row">
-                <div class="col-md-4 col-sm-6">
-                    <div class="single-key">
-                        <i class="fas fa-hospital-alt"></i>
-                        <h5>Newest Technologies</h5>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut erat nec leo lobortis blandit.</p>
+                <div class="fields">
+                    <div class="Resinput-field">
+                        <label>Full Name</label>
+                        <input type="text" placeholder="Enter your name" required>
                     </div>
-                </div>
 
-                <div class="col-md-4 col-sm-6">
-                    <div class="single-key">
-                        <i class="fas fa-user-md"></i>
-                        <h5>Experianced Doctors</h5>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut erat nec leo lobortis blandit.</p>
+                    <div class="Resinput-field">
+                        <label>Date of Birth</label>
+                        <input type="date" placeholder="Enter birth date" required>
                     </div>
-                </div>
 
-                <div class="col-md-4 col-sm-6">
-                    <div class="single-key">
-                        <i class="fas fa-briefcase-medical"></i>
-                        <h5>High Customer Satisfaction</h5>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut erat nec leo lobortis blandit.</p>
+                    <div class="Resinput-field">
+                        <label>Email</label>
+                        <input type="text" placeholder="Enter your email" required>
                     </div>
-                </div>
 
-                <div class="col-md-4 col-sm-6">
-                    <div class="single-key">
-                        <i class="fas fa-capsules"></i>
-                        <h5>Pharma Pipeline</h5>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut erat nec leo lobortis blandit.</p>
+                    <div class="Resinput-field">
+                        <label>Mobile Number</label>
+                        <input type="number" placeholder="Enter mobile number" required>
                     </div>
-                </div>
 
-                <div class="col-md-4 col-sm-6">
-                    <div class="single-key">
-                        <i class="fas fa-prescription-bottle-alt"></i>
-                        <h5>Pharma Team</h5>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut erat nec leo lobortis blandit.</p>
+                    <div class="Resinput-field">
+                        <label>Gender</label>
+                        <select required>
+                            <option disabled selected>Select gender</option>
+                            <option>Male</option>
+                            <option>Female</option>
+                        </select>
                     </div>
-                </div>
 
-
-
-                <div class="col-md-4 col-sm-6">
-                    <div class="single-key">
-                        <i class="far fa-thumbs-up"></i>
-                        <h5>High Quality treatments</h5>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut erat nec leo lobortis blandit.</p>
+                    <div class="Resinput-field">
                     </div>
                 </div>
             </div>
 
+            <div class="details ID">
+                <span class="title">Identity Details</span>
 
+                <div class="fields">
+                    <div class="Resinput-field">
+                        <label>ID Number</label>
+                        <input type="number" placeholder="Enter ID number" required>
+                    </div>
+                    <div class="Resinput-field">
+                        <label>Health Insurance ID</label>
+                        <input type="text" placeholder="Enter Health Insurance ID" required>
+                    </div>
+                    <div class="Resinput-field">
+                        <label>Address</label>
+                        <input type="text" placeholder="Enter Current address" required>
+                    </div>
 
+                    <div class="Resinput-field">
+                        <label>Nation</label>
+                        <select required>
+                            <option disabled selected>Select nation</option>
+                            <option>Kinh</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
 
+                    <div class="Resinput-field">
+                        <label>Nationality</label>
+                        <select required>
+                            <option disabled selected>Select your nationality</option>
+                            <option>VietNam</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                    <div class="Resinput-field">
+                    </div>
+                </div>
 
-
+                <button class="nextBtn">
+                    <span class="btnText">Next</span>
+                    <i class="uil uil-navigator"></i>
+                </button>
+            </div> 
         </div>
 
-    </section>
+        <div class="form second">
+            <div class="details address">
+                <span class="title">Vaccination registration information</span>
 
-   
+                <div class="fields">
+                    <div class="Resinput-field">
+                        <label>Sign up for the injection</label>
+                        <select required>
+                            <option disabled selected>Select for injection</option>
+                            <option>First injection</option>
+                            <option>Next injection</option>
+                        </select>
+                    </div>
+
+                    <div class="Resinput-field">
+                        <label>Date you want to be injected (expected)</label>
+                        <input type="date" placeholder="Enter date" required>
+                    </div>
+
+                    <div class="Resinput-field">
+                        <label>Desired injection session</label>
+                        <select required>
+                            <option disabled selected>Select for session</option>
+                            <option>Morning</option>
+                            <option>Afternoon</option>
+                            <option>All day</option>
+                        </select>
+                    </div>
+
+                    <div class="Resinput-field">
+                        <label>Vaccine name</label>
+                        <select required>
+                            <option disabled selected>Select vaccine name</option>
+                            <option>COVID-19 Vaccine AstraZeneca</option>
+                            <option>COVID-19 Vaccine Comirnaty (Pfizer)</option>
+                            <option>COVID-19 Vaccine Vero Cell</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="History_details">
+                <span class="title">History of 1st injection (option)</span>
+
+                <div class="fields">
+                    <div class="Resinput-field">
+                        <label>1st injection vaccine name</label>
+                        <select>
+                            <option disabled selected>Select vaccine name</option>
+                            <option>COVID-19 Vaccine AstraZeneca</option>
+                            <option>COVID-19 Vaccine Comirnaty (Pfizer)</option>
+                            <option>COVID-19 Vaccine Vero Cell</option>
+                        </select>
+                    </div>
+
+                    <div class="Resinput-field">
+                        <label>Date of injection</label>
+                        <input type="date" placeholder="Select Date of injection">
+                    </div>
+
+                    <div class="Resinput-field">
+                        <label>Injection Site</label>
+                        <select>
+                            <option disabled selected>Select site</option>
+                            <option>Site A</option>
+                            <option>Site B</option>
+                            <option>Site C</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="buttons">
+                    <div class="backBtn">
+                        <i class="uil uil-navigator"></i>
+                        <span class="btnText">Back</span>
+                    </div>
+                    
+                    <button class="sumbit">
+                        <span class="btnText">Submit</span>
+                        <i class="uil uil-navigator"></i>
+                    </button>
+                </div>
+            </div> 
+        </div>
+    </form>
+</div>
+</section>
+            
+    <script src="assets/js/Registration.js"></script>
+    <!--  ************************* Registration form End Here ************************** -->
    
     <!-- ################# Footer Starts Here#######################--->
 
