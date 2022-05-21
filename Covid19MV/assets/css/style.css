@@ -1058,4 +1058,119 @@ form .buttons button , .backBtn{
 .table3 tbody tr:last-of-type{
   border-bottom: 2px solid rgba(153, 204, 67, 0.9);
 }
+
+/* ===================================== Profile css ================================== */
+
+.Profilebody{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../images/loginBG.jpg");
+  background-attachment: fixed;
+  background-size: cover; 
+  font-family: 'Poppins', sans-serif;
+  
+}
+
+.Profilecontainer .Profiletitle ul{
+ text-align: center;
+ font-size: 18px;
+    font-weight: 600;
+    color: #333;
+}
+
+.Profilecontainer .Profiletitle h3{
+    position: relative;
+    text-align: center;
+    font-size: 27px;
+    font-weight: 600;
+    color: #333;
+    bottom: -6px;
+     
+ }
+
+.Profilecontainer{
+  position: relative;
+  max-width: 550px;
+  width: 100%;
+  border-radius: 6px;
+  padding: 30px;
+  margin: 0 15px;
+  background-color: #fff;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+
+.Profilecontainer form{
+  position: relative;
+  margin-top: 16px;
+  min-height: 580px;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.Profilecontainer .Userimage{
+  position: relative;
+  margin-top: -85px;
+}
+
+.usertable tbody tr td{
+  border-collapse: collapse;
+  margin: 25px 0;
+  min-width: 120px;
+  color: #333;
+  position: relative;
+  bottom: 45px;
+  left: 52px;
+  padding: 12px 15px;
+  font-size: 15px;
+  font-size: 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.usersearch li a{
+  position: relative;
+  left: 111px;
+}
+
+.usersearch li a:hover{
+  color:rgba(153, 204, 67, 0.9);
+}
+
+.logoutbutt{
+  display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    max-width: 200px;
+    width: 100%;
+    border: none;
+    outline: none;
+    color: #fff;
+    border-radius: 5px;
+    margin: 5px 0;
+    background-color: #4070f4;
+    transition: all 0.3s linear;
+    cursor: pointer;
+    position: relative;
+    left: 144px;
+    bottom: -42px;
+}
+
+.logoutbutt .btnText{
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.usericon img{
+  position: relative;
+  width: 40px;
+  right: 112px;
+  bottom: -20px;
+}
+
+.usericon li a{
+  position: relative;
+  left: 45px;
+}
 /*# sourceMappingURL=style.css.map */
