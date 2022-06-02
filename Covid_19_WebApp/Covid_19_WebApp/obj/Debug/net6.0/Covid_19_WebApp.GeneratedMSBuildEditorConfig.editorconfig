@@ -1,0 +1,104 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Covid_19_WebApp
+build_property.RootNamespace = Covid_19_WebApp
+build_property.ProjectDir = D:\Home Work\Database Analyze and Design\Final Project\Covid_19_WebApp\Covid_19_WebApp\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\Home Work\Database Analyze and Design\Final Project\Covid_19_WebApp\Covid_19_WebApp
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/Home Work/Database Analyze and Design/Final Project/Covid_19_WebApp/Covid_19_WebApp/Views/Citizens/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2l0aXplbnNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Home Work/Database Analyze and Design/Final Project/Covid_19_WebApp/Covid_19_WebApp/Views/Citizens/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2l0aXplbnNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Home Work/Database Analyze and Design/Final Project/Covid_19_WebApp/Covid_19_WebApp/Views/Citizens/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2l0aXplbnNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Home Work/Database Analyze and Design/Final Project/Covid_19_WebApp/Covid_19_WebApp/Views/Citizens/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2l0aXplbnNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Home Work/Database Analyze and Design/Final Project/Covid_19_WebApp/Covid_19_WebApp/Views/Citizens/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2l0aXplbnNcRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Home Work/Database Analyze and Design/Final Project/Covid_19_WebApp/Covid_19_WebApp/Views/Citizens/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2l0aXplbnNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Home Work/Database Analyze and Design/Final Project/Covid_19_WebApp/Covid_19_WebApp/Views/Citizens/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2l0aXplbnNcTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Home Work/Database Analyze and Design/Final Project/Covid_19_WebApp/Covid_19_WebApp/Views/Citizens/LoginSuccess.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2l0aXplbnNcTG9naW5TdWNjZXNzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Home Work/Database Analyze and Design/Final Project/Covid_19_WebApp/Covid_19_WebApp/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Home Work/Database Analyze and Design/Final Project/Covid_19_WebApp/Covid_19_WebApp/Views/Home/ManagerHome.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxNYW5hZ2VySG9tZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Home Work/Database Analyze and Design/Final Project/Covid_19_WebApp/Covid_19_WebApp/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Home Work/Database Analyze and Design/Final Project/Covid_19_WebApp/Covid_19_WebApp/Views/Managers/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuYWdlcnNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Home Work/Database Analyze and Design/Final Project/Covid_19_WebApp/Covid_19_WebApp/Views/Managers/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuYWdlcnNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Home Work/Database Analyze and Design/Final Project/Covid_19_WebApp/Covid_19_WebApp/Views/Managers/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuYWdlcnNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Home Work/Database Analyze and Design/Final Project/Covid_19_WebApp/Covid_19_WebApp/Views/Managers/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuYWdlcnNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Home Work/Database Analyze and Design/Final Project/Covid_19_WebApp/Covid_19_WebApp/Views/Managers/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuYWdlcnNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Home Work/Database Analyze and Design/Final Project/Covid_19_WebApp/Covid_19_WebApp/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Home Work/Database Analyze and Design/Final Project/Covid_19_WebApp/Covid_19_WebApp/Views/Shared/_ManagerLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9NYW5hZ2VyTGF5b3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Home Work/Database Analyze and Design/Final Project/Covid_19_WebApp/Covid_19_WebApp/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Home Work/Database Analyze and Design/Final Project/Covid_19_WebApp/Covid_19_WebApp/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Home Work/Database Analyze and Design/Final Project/Covid_19_WebApp/Covid_19_WebApp/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Home Work/Database Analyze and Design/Final Project/Covid_19_WebApp/Covid_19_WebApp/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-5zca3der5y

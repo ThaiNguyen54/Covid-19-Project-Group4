@@ -1,0 +1,218 @@
+﻿@model Covid_19_WebApp.Models.Citizen
+
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section Styles{
+  
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="assets/images/icon-removebg-preview.png">
+    <link rel="shortcut icon" href="assets/images/fav.jpg">
+    <link rel="stylesheet" href="~/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/assets/css/fontawsom-all.min.css">
+    <link rel="stylesheet" href="~/assets/css/animate.css">
+    <link rel="stylesheet" type="text/css" href="~/assets/css/style.css" />
+    <link rel="stylesheet" href="~/assets/css/bootstrap.min.css.map">
+    <link rel="stylesheet" href="~/assets/css/style.css.map">
+}
+
+
+
+
+@*<h1>Create</h1>
+
+<h4>CitizenModel</h4>
+<hr />*@
+@*<center>
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="Create">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="FName" class="control-label"></label>
+                    <input asp-for="FName" class="form-control" />
+                    <span asp-validation-for="FName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="LName" class="control-label"></label>
+                    <input asp-for="LName" class="form-control" />
+                    <span asp-validation-for="LName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Bdate" class="control-label"></label>
+                    <input asp-for="Bdate" class="form-control" />
+                    <span asp-validation-for="Bdate" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Address" class="control-label"></label>
+                    <input asp-for="Address" class="form-control" />
+                    <span asp-validation-for="Address" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Age" class="control-label"></label>
+                    <input asp-for="Age" class="form-control" />
+                    <span asp-validation-for="Age" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Password" class="control-label"></label>
+                    <input asp-for="Password" class="form-control" />
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Phone" class="control-label"></label>
+                    <input asp-for="Phone" class="form-control" />
+                    <span asp-validation-for="Phone" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Gender" class="control-label"></label>
+                    <input asp-for="Gender" class="form-control" />
+                    <span asp-validation-for="Gender" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Create" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+</center>*@
+
+<body>
+
+    <!-- ################# Our Team Starts Here#######################--->
+
+      <!--  ************************* Page Title Starts Here ************************** -->
+               <div class="page-nav no-margin row">
+                   <div class="container">
+                       <div class="row">
+                           <h2>Complete The Form Below To Sign Up</h2>
+                           <ul>
+                               <li><i class="fas fa-angle-double-right"></i> Note ! There are some forms that need to be filled out correctly</li>
+                           </ul>
+                       </div>
+                   </div>
+               </div>
+       
+         <!-- ######## Page  Title End ####### -->
+    
+
+   <!--  ************************* Registration form Starts Here ************************** -->
+   <section class="Registrationbody">
+   <div class="Registrationcontainer">
+    <resheader>Registration</resheader>
+
+    <form asp-action="Create">
+        <div class="form first">
+            <div class="details personal">
+                <span class="title">Personal Details</span>
+
+                <div class="fields">
+
+                    <div class="Resinput-field">
+                        <label>Citizen ID</label>
+                        <input asp-for="CitizenId" type="text" placeholder="Enter your Citizen ID" required>
+                    </div>
+
+                    <div class="Resinput-field">
+                        <label>First Name</label>
+                        <input asp-for="FName" type="text" placeholder="Enter your First Name" required>
+                    </div>
+
+                    <div class="Resinput-field">
+                        <label>Last Name</label>
+                        <input asp-for="LName" type="text" placeholder="Enter your Last Name" required>
+                    </div>
+
+                    <div class="Resinput-field">
+                        <label>Date of Birth</label>
+                        <input asp-for="Bdate" type="date" placeholder="Enter birth date" required>
+                    </div>
+
+                    <div class="Resinput-field">
+                        <label>Address</label>
+                        <input asp-for="Address" type="text" placeholder="Enter your address" required>
+                    </div>
+
+
+                    <div class="Resinput-field">
+                        <label>Email</label>
+                        <input asp-for="Email" type="text" placeholder="Enter your email" required>
+                    </div>
+
+                    <div class="Resinput-field">
+                        <label>Mobile Number</label>
+                        <input asp-for="Phone" type="number" placeholder="Enter mobile number" required>
+                    </div>
+
+                    <div class="Resinput-field">
+                        <label>Gender</label>
+                        <select asp-for="Gender" required>
+                            <option disabled selected>Select gender</option>
+                            <option>Male</option>
+                            <option>Female</option>
+                        </select>
+                    </div>
+
+                    <div class="Resinput-field">
+                        <label>Password</label>
+                        <input asp-for="Password" type="password" placeholder="Enter Password" required>
+                    </div>
+
+                    <div class="Resinput-field">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <input type="submit" value="Sign Up" class="btn btn-primary" />
+                </div>
+
+
+                @*<button class="nextBtn">
+                    <span class="btnText">Sign Up</span>
+                     <a asp-action="Create">Sign Up</a>
+                    <i class="uil uil-navigator"></i>
+                </button>*@
+            </div>
+
+          
+        </div>
+
+     
+    </form>
+</div>
+</section>
+            
+    <script src="assets/js/Registration.js"></script>
+    <!--  ************************* Registration form End Here ************************** -->
+   
+    
+    
+
+</body>
+
+
+
+
+</html>
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -14,7 +14,8 @@ Create table CITIZEN
 	Address varchar(100),
 	Age int,
 	Password varchar(100),
-	Phone varchar(100)
+	Phone varchar(100),
+	Email varchar(100)
 )
 
 Create table Vaccin_Registration_Form
@@ -52,6 +53,8 @@ Create table Nurse
 	Address varchar(100),
 	Age int,
 	Phone varchar(100),
+	Password varchar(100),
+	Email varchar(100)
 )
 
 create table SUPPLIER
@@ -80,6 +83,8 @@ Create table MANAGER
 	Address varchar(100),
 	Age int,
 	Phone varchar(100)
+	Password varchar(100),
+	Email varchar(100)
 )
 
 Create table VACCIN
