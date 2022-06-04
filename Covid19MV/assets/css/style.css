@@ -610,6 +610,7 @@ header {
   transition: margin-left 0.18s ease, opacity 0.15s ease;
 }
 
+
 .containerLogin .signup{
   opacity: 0;
   transition: opacity 0.09s ease;
@@ -621,6 +622,7 @@ header {
 
 .containerLogin.active .forms{
   height: 600px;
+  
 }
 .containerLogin .form .title{
   position: relative;
@@ -740,6 +742,16 @@ header {
   text-align: center;
 }
 
+.scroll-bg{
+  background: white;
+}
+
+.scroll-div{
+  height: 300px;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
 /* ===================================== registration form css ================================== */
 
   /* ===== Google Font Import - Poppins ===== */
@@ -845,6 +857,7 @@ form .fields .Resinput-field{
     padding: 0 15px;
     height: 42px;
     margin: 8px 0;
+    width: 261px;
 }
 .Resinput-field input :focus,
 .Resinput-field select:focus{
@@ -1012,6 +1025,7 @@ form .buttons button , .backBtn{
 .VaccineTable{
   position: relative;
   bottom: -80px;
+  right: -98px;
 }
 
 .table3{

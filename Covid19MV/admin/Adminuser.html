@@ -5,12 +5,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title> Covid-19 Vaccine Portal</title>
-    <link rel="icon" href="assets/images/icon-removebg-preview.png">
-    <link rel="shortcut icon" href="assets/images/fav.jpg">
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/fontawsom-all.min.css">
-    <link rel="stylesheet" href="assets/css/animate.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <link rel="icon" href="../assets/images/icon-removebg-preview.png">
+    <link rel="shortcut icon" href="../assets/images/fav.jpg">
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/fontawsom-all.min.css">
+    <link rel="stylesheet" href="../assets/css/animate.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 </head>
 
 <body>
@@ -43,18 +44,17 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-3 col-sm-12 nav-img">
-                        <img src="assets/images/logo.jpg" alt="">
+                        <img src="../assets/images/logo.jpg" alt="">
                        <a data-toggle="collapse" data-target="#menu" href="#menu" ><i class="fas d-block d-md-none small-menu fa-bars"></i></a>
                     </div>
                     <div id="menu" class="col-md-9 d-none d-md-block nav-item">
                         <ul>
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="Registration.html">Vaccine Registration</a></li>
-                            <li><a href="Search.html">Search</a></li>
-                            <li><a href="contact_us.html">Contact Us</a></li>
+                            <li><a href="AdminHome.html">Home</a></li>
+                            <li><a href="Citizen.html">Citizen</a></li>
+                            <li><a href="AdminCU.html">Contact Us</a></li>
                             <div class="usericon">
-                                <a href="user.html"><img src="./assets/images/usericon.png" alt=""> </a>
-                                <li> <a href="user.html">UserProfile</a></li>
+                                <a href="Adminuser.html"><img src="../assets/images/usericon.png" alt=""> </a>
+                                <li> <a href="Adminuser.html">UserProfile</a></li>
                             </div>
                         </ul>
                     </div>
@@ -73,7 +73,7 @@
                <div class="page-nav no-margin row">
                    <div class="container">
                        <div class="row">
-                           <h2>Obtain your Covid-19 vaccine certificate</h2>
+                           <h2>Your Profile</h2>
                        </div>
                    </div>
                </div>
@@ -82,111 +82,57 @@
     
 
    
-  <!-- ################# Look up Starts Here#######################--->
+        <!--  ************************* Profile start Here ************************** -->
+        <section class="Profilebody">
+            <div class="Profilecontainer">
+                <div class="Profiletitle"> 
+                   <h3>INFORMATION</h3>
+                </div>
+              
+               <form action="#">
+                  <div class="Userimage">
+                      <img src="../assets/images/userimage.png" alt="">
+                  </div>
 
-    <section class="LookUpbody">
-         	<div class="Lookupcontainer">
-                 <div class="Lookuptitle"> 
-                    <ul>SOCIALIST REPUBLIC OF VIETNAM <br>
-                        Independence-Freedom-Happiness</ul>
-                    <h3>COVID-19 VACCINE CERTIFICATE</h3>
-                 </div>
-               
-        		<form action="#">
-                   <table class="table1">
-                     <thead>
-                         <tr>
-                             <th>Fullname </th>
-                             <th>Date of birth </th>
-                             <th>Identification/Citizen identification code </th>
-                         </tr>
-
-                     </thead>
-
-                     <tbody>
-                         <tr>
-                             <td>
-                                ___
-                             </td>
-                             <td>
-                                ___
+                  <table class="usertable">
+                    <tbody>
+                        <tr>
+                            <td>
+                               UserName: 
                             </td>
                             <td>
-                                ___
-                            </td>
-                         </tr>
-                     </tbody>
-                   </table>
-
-                   <table class="table2">
-                    <thead>
-                        <tr>
-                            <th>Phone number </th>
-                            <th>Address </th>                          
+                               __
+                           </td>
                         </tr>
-                        <tbody>
-                            <tr>
-                                <td>
-                                    ___
-                                </td>
-                                <td>
-                                    ___
-                               </td>
-                            </tr>
-                        </tbody>
+                        <tr>
+                            <td>
+                               Email: 
+                            </td>
+                            <td>
+                                __
+                           </td>
+                        </tr>
+                        <tr>
+                            <td>
+                               Phone: 
+                            </td>
+                            <td>
+                                __
+                           </td>
+                        </tr>
+                    </tbody>                          
+                  </table>
 
-                    </thead>
-                   </table>
-                   <div class="VaccineTable">
-                   <table class="table3">
-                        <thead>
-                            <tr>
-                                <th>Vaccination number </th>
-                                <th>Vaccination time </th>
-                                <th>Vaccination name </th>
-                            </tr>
+                  <button class="logoutbutt">
+                    <span class="btnText">Log out</span>
+                </button>
 
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>
-                                   _
-                                </td>
-                                <td>
-                                  _ 
-                               </td>
-                               <td>
-                                  _ 
-                               </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    _
-                                </td>
-                                <td>
-                                    _
-                               </td>
-                               <td>
-                                    _
-                               </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    _
-                                </td>
-                                <td>
-                                    _
-                               </td>
-                               <td>
-                                    _
-                               </td>
-                            </tr>
-                        </tbody>
-                   </table>
-                </div>
-                </form>
-         	</div>
-         </section>
+               </form>
+            </div>
+        </section>     
+        <!-- ######## Profile End ####### -->
+
+    
 
    
     <!-- ################# Footer Starts Here#######################--->
@@ -245,11 +191,11 @@
 
 </body>
 
-<script src="assets/js/jquery-3.2.1.min.js"></script>
-<script src="assets/js/popper.min.js"></script>
-<script src="assets/js/bootstrap.min.js"></script>
-<script src="assets/plugins/scroll-fixed/jquery-scrolltofixed-min.js"></script>
-<script src="assets/js/script.js"></script>
+<script src="../assets/js/jquery-3.2.1.min.js"></script>
+<script src="../assets/js/popper.min.js"></script>
+<script src="../assets/js/bootstrap.min.js"></script>
+<script src="../assets/plugins/scroll-fixed/jquery-scrolltofixed-min.js"></script>
+<script src="../assets/js/script.js"></script>
 
 
 </html>
