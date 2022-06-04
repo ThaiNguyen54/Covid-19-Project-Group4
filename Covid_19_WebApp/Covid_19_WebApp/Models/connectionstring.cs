@@ -2,8 +2,7 @@
 {
     public class connectionstring
     {
-        private string AzureconnectionString = "Server=tcp:webprojectcovid19.database.windows.net,1433;Initial Catalog=Covid-19 Project;Persist Security Info=False;User ID=thainguyen;Password=Thai******:::542001;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
-
+        private string AzureconnectionString = "Add your databse connection string here";
         
 
         public string GetConnectionString()
