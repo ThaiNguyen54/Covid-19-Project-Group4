@@ -16,6 +16,7 @@
     <link rel="stylesheet" type="text/css" href="~/assets/css/style.css" />
     <link rel="stylesheet" href="~/assets/css/bootstrap.min.css.map">
     <link rel="stylesheet" href="~/assets/css/style.css.map">
+
 }
 
 @*<h1>Login</h1>
@@ -94,7 +95,7 @@
    
   <!-- ################# Login & Sign Up Starts Here#######################--->
 
-    <section class="Loginbody">
+     <section class="Loginbody">
          	<div class="containerLogin">
                 <div class="forms">
                     <div class="form login">
@@ -109,34 +110,103 @@
                                 <input asp-for="Password" type="password" class="password" placeholder="Enter your password" required>
                                 <i class="uil uil-lock icon"></i>
                             </div>
-                            <br>
-                            @if (GlobalVariables.isCorrect == false)
+                             @if (GlobalVariables.isCorrect == false)
                             {
                                 <p style="color:red">Email or password is wrong</p>
                                 GlobalVariables.isCorrect = true;
                             }
-
                             <div class="checkbox-text">
                                 
                                 <a href="#" class="text">Forgot password?</a>
                             </div>
-
+        
                             <div class="input-field button">
-                                <input type="submit" value="Login" class="btn btn-primary" />
+
+                                <input type="submit" value="Login Now" class="btn btn-primary" />
                             </div>
                         </form>
         
                         <div class="login-signup">
                             <span class="text">Don't have an account?
-                                <a href="@Url.Action("Create", "Citizens")" class="text signup-link">Sign up</a>
+                                <a href="#" class="text signup-link">Signup now</a>
                             </span>
                         </div>
                     </div>
         
+                    <!-- Registration Form -->
+                    <div class="form signup">
+                        <span class="title">Registration</span>
+        
+                        <form asp-action="Create">
+                            <div class="scroll-bg">
+                                <div class="scroll-div">
+                                    <div class="scroll-object">
+                                        <div class="input-field">
+                                            <input asp-for="CitizenId" type="number" placeholder="Enter your citizen ID" required>
+                                            <i class="uil uil-postcard"></i>
+                                        </div>
+                                        <div class="input-field">
+                                            <input asp-for="FName" type="text" placeholder="Enter your first name" required>
+                                            <i class="uil uil-user"></i>
+                                        </div>
+                                        <div class="input-field">
+                                            <input asp-for="LName" type="text" placeholder="Enter your last name" required>
+                                            <i class="uil uil-user"></i>
+                                        </div>                    
+                                        <div class="input-field">
+                                            <input asp-for="Bdate" type="date" placeholder="Date of Birth" required>
+                                            <i class="uil uil-calender"></i>
+                                        </div>
+                                        <div class="input-field">
+                                            <input asp-for="Address" type="text" placeholder="Enter your address" required>
+                                            <i class="uil uil-home"></i>
+                                        </div>
+                                        <div class="input-field">
+                                            <input asp-for="Email" type="text" placeholder="Enter your email" required>
+                                            <i class="uil uil-envelope"></i>
+                                        </div>
+                                        <div class="input-field">
+                                            <input asp-for="Phone" type="number" placeholder="Enter your phone number" required>
+                                            <i class="uil uil-phone"></i>
+                                        </div>
+                                        <div class="input-field">
+                                                <select asp-for="Gender" required>
+                                                    <option disabled selected>Select gender</option>
+                                                    <option>Male ♂️</option>
+                                                    <option>Female ♀️</option>
+                                                </select>  
+                                        </div>
+                                        <div class="input-field">
+                                            <input asp-for="Password" type="password" class="password" placeholder="Create a password" required>
+                                            <i class="uil uil-lock icon"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+        
+                            <div class="checkbox-text">
+                                <div class="checkbox-content">
+                                    <input type="checkbox" id="sigCheck" required>
+                                    <label for="sigCheck" class="text">I accept all terms & conditions</label>
+                                </div>                         
+                            </div>
+        
+                            <div class="input-field button">
+                                <input type="submit" value="Sign Up" class="btn btn-primary" />
+                            </div>
+                        </form>
+        
+                        <div class="login-signup">
+                            <span class="text">Already have an account?
+                                <a href="#" class="text login-link">Login now</a>
+                            </span>
+                        </div>
+                    </div>
                 </div>
          	</div>
      </section>
-     <script src="assets/js/loginpage.js"></script>
+     <script src="~/assets/js/loginpage.js"></script>
    
         
 

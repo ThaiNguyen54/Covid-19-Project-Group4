@@ -368,8 +368,8 @@ header .header-nav .nav-item ul li form button {
     }
 
     /* Add a green background color to navbar links on hover */
-    .header-nav a:hover, .dropdown:hover .dropbtn {
-        background-color: forestgreen;
+    .header-nav .dropdown:hover .dropbtn {
+        background-color:  #99cc43;
     }
 
 /* Dropdown content (hidden by default) */
@@ -913,6 +913,7 @@ header .header-nav .nav-item ul li form button {
         transition: margin-left 0.18s ease, opacity 0.15s ease;
     }
 
+
     .containerLogin .signup {
         opacity: 0;
         transition: opacity 0.09s ease;
@@ -1045,6 +1046,16 @@ header .header-nav .nav-item ul li form button {
 .form .login-signup {
     margin-top: 30px;
     text-align: center;
+}
+
+.scroll-bg {
+    background: white;
+}
+
+.scroll-div {
+    height: 300px;
+    overflow: hidden;
+    overflow-y: scroll;
 }
 
 /* ===================================== registration form css ================================== */

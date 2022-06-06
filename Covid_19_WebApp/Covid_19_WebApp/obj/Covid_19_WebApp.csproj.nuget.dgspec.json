@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Home Work\\Database Analyze and Design\\Final Project\\Covid_19_WebApp\\Covid_19_WebApp\\Covid_19_WebApp.csproj": {}
+    "D:\\THANH\\LapTrinh\\WebDev\\Covid-19-Project-Group4-ThanhFE\\Covid_19_WebApp\\Covid_19_WebApp\\Covid_19_WebApp.csproj": {}
   },
   "projects": {
-    "D:\\Home Work\\Database Analyze and Design\\Final Project\\Covid_19_WebApp\\Covid_19_WebApp\\Covid_19_WebApp.csproj": {
+    "D:\\THANH\\LapTrinh\\WebDev\\Covid-19-Project-Group4-ThanhFE\\Covid_19_WebApp\\Covid_19_WebApp\\Covid_19_WebApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Home Work\\Database Analyze and Design\\Final Project\\Covid_19_WebApp\\Covid_19_WebApp\\Covid_19_WebApp.csproj",
+        "projectUniqueName": "D:\\THANH\\LapTrinh\\WebDev\\Covid-19-Project-Group4-ThanhFE\\Covid_19_WebApp\\Covid_19_WebApp\\Covid_19_WebApp.csproj",
         "projectName": "Covid_19_WebApp",
-        "projectPath": "D:\\Home Work\\Database Analyze and Design\\Final Project\\Covid_19_WebApp\\Covid_19_WebApp\\Covid_19_WebApp.csproj",
-        "packagesPath": "C:\\Users\\19522\\.nuget\\packages\\",
-        "outputPath": "D:\\Home Work\\Database Analyze and Design\\Final Project\\Covid_19_WebApp\\Covid_19_WebApp\\obj\\",
+        "projectPath": "D:\\THANH\\LapTrinh\\WebDev\\Covid-19-Project-Group4-ThanhFE\\Covid_19_WebApp\\Covid_19_WebApp\\Covid_19_WebApp.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "D:\\THANH\\LapTrinh\\WebDev\\Covid-19-Project-Group4-ThanhFE\\Covid_19_WebApp\\Covid_19_WebApp\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\19522\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
