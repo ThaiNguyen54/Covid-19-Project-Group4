@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "o13rcP9DwA7i7FMe9Q4GJKSk/86ak9Z4z0yEsXwORPEb5iy33Pap1re754OQG7Wa7wjPhHEMjvtKQ0CYEC9Huw==",
+  "dgSpecHash": "FIIQ4wcY8kDZ2J1QOuxWMd4ERIs4jQg5KCtRCSj0Vq6Dc9vrkDHjIe4kmVlsYasOWdW9/aPRU89wDzBb3Mp5yQ==",
   "success": true,
-  "projectFilePath": "D:\\THANH\\LapTrinh\\WebDev\\Covid-19-Project-Group4-ThanhFE\\Covid_19_WebApp\\Covid_19_WebApp\\Covid_19_WebApp.csproj",
+  "projectFilePath": "D:\\THANH\\LapTrinh\\WebDev\\Covid-19-Project-Group4\\Covid_19_WebApp\\Covid_19_WebApp\\Covid_19_WebApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Admin\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",

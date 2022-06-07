@@ -9469,11 +9469,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\THANH\\LapTrinh\\WebDev\\Covid-19-Project-Group4-ThanhFE\\Covid_19_WebApp\\Covid_19_WebApp\\Covid_19_WebApp.csproj",
+      "projectUniqueName": "D:\\THANH\\LapTrinh\\WebDev\\Covid-19-Project-Group4\\Covid_19_WebApp\\Covid_19_WebApp\\Covid_19_WebApp.csproj",
       "projectName": "Covid_19_WebApp",
-      "projectPath": "D:\\THANH\\LapTrinh\\WebDev\\Covid-19-Project-Group4-ThanhFE\\Covid_19_WebApp\\Covid_19_WebApp\\Covid_19_WebApp.csproj",
+      "projectPath": "D:\\THANH\\LapTrinh\\WebDev\\Covid-19-Project-Group4\\Covid_19_WebApp\\Covid_19_WebApp\\Covid_19_WebApp.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "D:\\THANH\\LapTrinh\\WebDev\\Covid-19-Project-Group4-ThanhFE\\Covid_19_WebApp\\Covid_19_WebApp\\obj\\",
+      "outputPath": "D:\\THANH\\LapTrinh\\WebDev\\Covid-19-Project-Group4\\Covid_19_WebApp\\Covid_19_WebApp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
