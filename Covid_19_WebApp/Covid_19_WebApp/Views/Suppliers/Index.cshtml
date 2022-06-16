@@ -1,0 +1,48 @@
+﻿@model IEnumerable<Covid_19_WebApp.Models.Supplier>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.SupName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SupAddress)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Phone)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.SupName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SupAddress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Phone)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.SupID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.SupID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.SupID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

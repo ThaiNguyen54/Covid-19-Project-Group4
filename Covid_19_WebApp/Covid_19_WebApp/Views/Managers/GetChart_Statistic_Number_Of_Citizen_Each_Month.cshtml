@@ -1,0 +1,60 @@
+﻿@*<img src="@Url.Action("GetChart_Statistic_Number_Of_Citizen_Each_Month", "Managers")" alt="Chart" />  *@
+
+@{
+    Layout = "~/Views/Shared/_ManagerLayout.cshtml";
+}
+
+@section Styles{
+  
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="assets/images/icon-removebg-preview.png">
+    <link rel="shortcut icon" href="assets/images/fav.jpg">
+    <link rel="stylesheet" href="~/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/assets/css/fontawsom-all.min.css">
+    <link rel="stylesheet" href="~/assets/css/animate.css">
+    <link rel="stylesheet" type="text/css" href="~/assets/css/style.css" />
+    <link rel="stylesheet" href="~/assets/css/bootstrap.min.css.map">
+    <link rel="stylesheet" href="~/assets/css/style.css.map">
+}
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+ 
+<!DOCTYPE HTML>
+<html>
+<head>
+<script>
+window.onload = function () {
+ 
+var chart = new CanvasJS.Chart("chartContainer", {
+	animationEnabled: true,
+	theme: "light2", // "light1", "light2", "dark1", "dark2"
+	title: {
+		text: "Number of Citizens Get Covid-19 Vaccination In Each Month"
+	},
+	axisX:{
+	   title: "Month"
+	},
+	axisY: {
+		title: "No. of Citizens"
+	},
+	data: [{
+		type: "column",
+		dataPoints: @Html.Raw(ViewBag.DataPoints)
+	}]
+});
+chart.render();
+ 
+}
+</script>
+</head>
+<body>
+<div id="chartContainer" style="height: 370px; width: 100%;"></div>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>	
+</body>
+</html>      

@@ -181,12 +181,22 @@
 
      
     </form>
-</div>
-</section>
+
+    @if (ViewBag.Message != null)
+            {
+                <script type="text/javascript">
+window.onload = function() {
+    alert("@ViewBag.Message");
+};
+                    </script>
+            }
+
+    
+    </section>
             
-    <script src="assets/js/Registration.js"></script>
-    <!--  ************************* Registration form End Here ************************** -->
-   
+        <script src="assets/js/Registration.js"></script>
+        <!--  ************************* Registration form End Here ************************** -->
+
     
     
 

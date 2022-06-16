@@ -1,0 +1,169 @@
+﻿<!doctype html>
+<html lang="en">
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section Styles{
+  
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="assets/images/icon-removebg-preview.png">
+    <link rel="shortcut icon" href="assets/images/fav.jpg">
+    <link rel="stylesheet" href="~/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/assets/css/fontawsom-all.min.css">
+    <link rel="stylesheet" href="~/assets/css/animate.css">
+    <link rel="stylesheet" type="text/css" href="~/assets/css/style.css" />
+    <link rel="stylesheet" href="~/assets/css/bootstrap.min.css.map">
+    <link rel="stylesheet" href="~/assets/css/style.css.map">
+}
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+
+<body>
+
+
+
+    
+    <!-- ################# Our Team Starts Here#######################--->
+
+      <!--  ************************* Page Title Starts Here ************************** -->
+               <div class="page-nav no-margin row">
+                   <div class="container">
+                       <div class="row">
+                           <h2>Obtain your Covid-19 vaccine certificate</h2>
+                       </div>
+                   </div>
+               </div>
+       
+         <!-- ######## Page  Title End ####### -->
+    
+
+   
+  <!-- ################# Look up Starts Here#######################--->
+
+    <section class="LookUpbody">
+         	<div class="Lookupcontainer">
+                 <div class="Lookuptitle"> 
+                    <ul>SOCIALIST REPUBLIC OF VIETNAM <br>
+                        Independence-Freedom-Happiness</ul>
+                    <h3>COVID-19 VACCINE CERTIFICATE</h3>
+                 </div>
+               
+        		<form action="#">
+                   <table class="table1">
+                     <thead>
+                         <tr>
+                             <th>Fullname </th>
+                             <th>Date of birth </th>
+                             <th>Identification/Citizen identification code </th>
+                         </tr>
+
+                     </thead>
+
+                     <tbody>
+                         <tr>
+                             <td>
+                                @GlobalVariables.citizen.FName @GlobalVariables.citizen.LName
+                             </td>
+                             <td>
+                                @GlobalVariables.citizen.Bdate
+                            </td>
+                            <td>
+                                @GlobalVariables.citizen.CitizenId
+                            </td>
+                         </tr>
+                     </tbody>
+                   </table>
+
+                   <table class="table2">
+                    <thead>
+                        <tr>
+                            <th>Phone number </th>
+                            <th>Address </th>                          
+                        </tr>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    @GlobalVariables.citizen.Phone
+                                </td>
+                                <td>
+                                    @GlobalVariables.citizen.Address
+                               </td>
+                            </tr>
+                        </tbody>
+
+                    </thead>
+                   </table>
+                   <center>
+                        <div class="VaccineTable">
+                   <table class="table3">
+                        <thead>
+                            <tr>
+                                <th>Vaccination number </th>
+                                <th>Vaccination time </th>
+                                <th>Vaccination name </th>
+                            </tr>
+
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                   1
+                                </td>
+                                <td>
+                                  @GlobalVariables.vaccineRecord.FirstDate
+                               </td>
+                               <td>
+                                  @GlobalVariables.vaccineRecord.FirstVaccine
+                               </td>
+
+                            </tr>
+                            <tr>
+                                <td>
+                                    2
+                                </td>
+                                <td>
+                                    @GlobalVariables.vaccineRecord.SecondDate
+                               </td>
+                               <td>
+                                    @GlobalVariables.vaccineRecord.SecondVaccine
+                               </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    3
+                                </td>
+                                <td>
+                                    @GlobalVariables.vaccineRecord.ThirdDate
+                               </td>
+                               <td>
+                                    @GlobalVariables.vaccineRecord.ThirdVaccine
+                               </td>
+                            </tr>
+                        </tbody>
+                   </table>
+                </div>
+                   </center>
+                  
+                </form>
+         	</div>
+         </section>
+
+  
+</body>
+
+<script src="assets/js/jquery-3.2.1.min.js"></script>
+<script src="assets/js/popper.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/plugins/scroll-fixed/jquery-scrolltofixed-min.js"></script>
+<script src="assets/js/script.js"></script>
+
+
+</html>

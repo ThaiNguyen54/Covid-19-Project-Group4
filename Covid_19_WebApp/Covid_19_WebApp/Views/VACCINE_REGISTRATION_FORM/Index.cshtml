@@ -1,0 +1,80 @@
+﻿@model IEnumerable<Covid_19_WebApp.Models.VACCINE_REGISTRATION_FORM>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section Styles{
+  
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="assets/images/icon-removebg-preview.png">
+    <link rel="shortcut icon" href="assets/images/fav.jpg">
+    <link rel="stylesheet" href="~/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/assets/css/fontawsom-all.min.css">
+    <link rel="stylesheet" href="~/assets/css/animate.css">
+    <link rel="stylesheet" type="text/css" href="~/assets/css/style.css" />
+    <link rel="stylesheet" href="~/assets/css/bootstrap.min.css.map">
+    <link rel="stylesheet" href="~/assets/css/style.css.map">
+}
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.VaccineID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CitizenID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.InjectionDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RegisterDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.InjectionNumber)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.VaccineID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CitizenID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.InjectionDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RegisterDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.InjectionNumber)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.FormID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.FormID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.FormID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

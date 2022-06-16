@@ -1,0 +1,96 @@
+﻿@model IEnumerable<Covid_19_WebApp.Models.Vaccine_Record>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CitizenID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Number_Injection)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstVaccine)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SecondDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SecondVaccine)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ThirdDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ThirdVaccine)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.First_NurseID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Second_NurseID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Third_NurseID)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CitizenID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Number_Injection)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FirstDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FirstVaccine)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SecondDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SecondVaccine)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ThirdDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ThirdVaccine)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.First_NurseID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Second_NurseID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Third_NurseID)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.RecordID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.RecordID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.RecordID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

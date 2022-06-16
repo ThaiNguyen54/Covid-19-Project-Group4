@@ -1,0 +1,50 @@
+﻿@model Covid_19_WebApp.Models.Vaccine_Entry
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Edit</h1>
+
+<h4>Vaccine_Entry</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="EntryId" />
+            <div class="form-group">
+                <label asp-for="ManagerID" class="control-label"></label>
+                <input asp-for="ManagerID" class="form-control" />
+                <span asp-validation-for="ManagerID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SupID" class="control-label"></label>
+                <input asp-for="SupID" class="form-control" />
+                <span asp-validation-for="SupID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EntryDate" class="control-label"></label>
+                <input asp-for="EntryDate" class="form-control" />
+                <span asp-validation-for="EntryDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Amount_Vaccine" class="control-label"></label>
+                <input asp-for="Amount_Vaccine" class="form-control" />
+                <span asp-validation-for="Amount_Vaccine" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

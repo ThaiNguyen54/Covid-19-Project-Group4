@@ -61,9 +61,20 @@ namespace Covid_19_WebApp.Controllers
         {
             if (ModelState.IsValid)
             {
+                //_context.Add(citizen);
+                //await _context.SaveChangesAsync();
+                //return RedirectToAction(nameof(Index));
                 _context.Add(citizen);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                try
+                {
+                    await _context.SaveChangesAsync();
+                    return RedirectToAction(nameof(Index));
+                }
+                catch
+                {
+                    ViewBag.Message = "Citizens must be older than or equal to 18 years old.";
+                    //return View("InsertTrigger");
+                }
             }
             return View(citizen);
         }
@@ -114,7 +125,7 @@ namespace Covid_19_WebApp.Controllers
                         throw;
                     }
                 }
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(CitizenInformation));
             }
             return View(citizen);
         }
@@ -193,7 +204,42 @@ namespace Covid_19_WebApp.Controllers
             if (dr.Read())
             {
                 GlobalVariables.isLogin = true;
+                GlobalVariables.citizen.CitizenId = dr.GetInt32(0);
                 GlobalVariables.citizen.FName = dr.GetString(1);
+                GlobalVariables.citizen.LName = dr.GetString(2);
+                GlobalVariables.citizen.Bdate = dr.GetDateTime(3);
+                GlobalVariables.citizen.Address = dr.GetString(4);
+                GlobalVariables.citizen.Phone = dr.GetString(6);
+                GlobalVariables.citizen.Gender = dr.GetString(8);
+                GlobalVariables.citizen.Email = dr.GetString(7);
+
+
+                GlobalVariables.day = GlobalVariables.citizen.Bdate.Day;
+                GlobalVariables.month = GlobalVariables.citizen.Bdate.Month;
+                GlobalVariables.year = GlobalVariables.citizen.Bdate.Year;
+
+                string day_str = "";
+                string month_str = "";
+
+                if (GlobalVariables.day <= 9)
+                {
+                    day_str = "0" + Convert.ToString(GlobalVariables.day);
+                }
+                else if (GlobalVariables.day > 9)
+                {
+                    day_str =  Convert.ToString(GlobalVariables.day);
+                }
+
+                if (GlobalVariables.month <= 9)
+                {
+                    month_str = "0" + Convert.ToString(GlobalVariables.month);
+                }
+                else if (GlobalVariables.month > 9)
+                {
+                    month_str = Convert.ToString(GlobalVariables.month);
+                }
+
+                GlobalVariables.DateOfBirth = Convert.ToString(GlobalVariables.year) + "-" + month_str + "-" + day_str;
                 con.Close();
                 //return View("LoginSuccess");
                 return RedirectToAction("Index", "Home");
@@ -209,7 +255,87 @@ namespace Covid_19_WebApp.Controllers
         public IActionResult LogOut()
         {
             GlobalVariables.isLogin = false;
+            GlobalVariables.vaccineRecord.FirstDate=null;
+            GlobalVariables.vaccineRecord.FirstVaccine = null;
+            GlobalVariables.vaccineRecord.SecondDate = null;
+            GlobalVariables.vaccineRecord.SecondVaccine = null;
+            GlobalVariables.vaccineRecord.ThirdDate = null;
+            GlobalVariables.vaccineRecord.ThirdVaccine = null;
             return RedirectToAction("Index", "Home");
+        }
+
+        public ActionResult CitizenInformation(Citizen citizen)
+        {
+            List<Citizen> foundCitizen = new List<Citizen>();
+            connectionString();
+            con.Open();
+            com.Connection = con;
+            com.CommandText = "Select * from Citizen where CitizenID = '" + GlobalVariables.citizen.CitizenId + "'";
+            dr = com.ExecuteReader();
+            if (dr.Read())
+            {
+                foundCitizen.Add(new Citizen { CitizenId = (int)dr.GetInt32(0), FName = dr.GetString(1), LName = dr.GetString(2),
+                    Bdate = dr.GetDateTime(3), Address = dr.GetString(4), Phone = dr.GetString(6), Gender = dr.GetString(8), Email = dr.GetString(7) });
+                con.Close();
+                return View("CitizenInformation", foundCitizen);
+            }
+            else
+            {
+                GlobalVariables.isCorrect = false;
+                con.Close();
+                return View("Login");
+            }
+        }
+
+        public IActionResult SearchCitzen(string SearchTerm)
+        {
+            List<Citizen> foundCitizen = new List<Citizen>();
+            connectionString();
+            con.Open();
+            com.Connection = con;
+            com.CommandText = "Select * from Citizen where FName like " + "'%" + SearchTerm + "%'";
+            dr = com.ExecuteReader();
+            if (dr.Read())
+            {
+                foundCitizen.Add(new Citizen
+                {
+                    CitizenId = (int)dr.GetInt32(0),
+                    FName = dr.GetString(1),
+                    LName = dr.GetString(2),
+                    Bdate = dr.GetDateTime(3),
+                    Address = dr.GetString(4),
+                    Phone = dr.GetString(6),
+                    Gender = dr.GetString(8),
+                    Email = dr.GetString(7)
+                });
+                con.Close();
+                return View("Index", foundCitizen);
+            }
+            else
+            {
+                return RedirectToAction("Index", "Citizens", "Not Found");
+            }
+            //return RedirectToAction("ManagerHome", "Home");
+        }
+
+        public IActionResult VaccinationHistory()
+        {
+            connectionString();
+            con.Open();
+            com.Connection = con;
+            com.CommandText = "Select * from Vaccine_Record where CitizenID = '" + GlobalVariables.citizen.CitizenId + "'";
+            dr = com.ExecuteReader();
+            if (dr.Read())
+            {
+                GlobalVariables.vaccineRecord.FirstDate = dr.GetDateTime(3);
+                GlobalVariables.vaccineRecord.FirstVaccine = dr.GetString(4);
+                GlobalVariables.vaccineRecord.SecondDate = dr.GetDateTime(5);
+                GlobalVariables.vaccineRecord.SecondVaccine = dr.GetString(6);
+                GlobalVariables.vaccineRecord.ThirdDate = dr.GetDateTime(7);
+                GlobalVariables.vaccineRecord.ThirdVaccine = dr.GetString(8);
+            }
+
+            return View();
         }
     }
 }

@@ -1,0 +1,110 @@
+﻿@model Covid_19_WebApp.Models.Vaccine
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section Styles{
+  
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="assets/images/icon-removebg-preview.png">
+    <link rel="shortcut icon" href="assets/images/fav.jpg">
+    <link rel="stylesheet" href="~/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/assets/css/fontawsom-all.min.css">
+    <link rel="stylesheet" href="~/assets/css/animate.css">
+    <link rel="stylesheet" type="text/css" href="~/assets/css/style.css" />
+    <link rel="stylesheet" href="~/assets/css/bootstrap.min.css.map">
+    <link rel="stylesheet" href="~/assets/css/style.css.map">
+}
+
+
+<h1>Create</h1>
+
+<h4>Vaccine</h4>
+<hr />
+@*<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="WarehouseID" class="control-label"></label>
+                <input asp-for="WarehouseID" class="form-control" />
+                <span asp-validation-for="WarehouseID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="VaccineName" class="control-label"></label>
+                <input asp-for="VaccineName" class="form-control" />
+                <span asp-validation-for="VaccineName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>*@
+
+<section class="Registrationbody">
+   <div class="Registrationcontainer">
+    <resheader>Registration</resheader>
+
+    <form asp-action="Create">
+        <div class="form first">
+            <div class="details personal">
+                <span class="title">Vaccine</span>
+
+                <div class="fields">
+
+                    <div class="Resinput-field">
+                        <label>Vaccine ID</label>
+                        <input asp-for="VaccineID" type="text" placeholder="Enter Vaccine ID" required>
+                    </div>
+
+                    <div class="Resinput-field">
+                        <label>Warehouse ID</label>
+                        <input asp-for="WarehouseID" type="text" placeholder="Enter Warehouse ID" required>
+                    </div>
+
+                    <div class="Resinput-field">
+                        <label>Vaccine Name</label>
+                        <input asp-for="VaccineName" type="text" placeholder="Enter Vaccine Name" required>
+                    </div>
+
+
+
+                   
+                </div>
+
+                <div class="form-group">
+                     <input type="submit" value="Create" class="btn btn-primary" />
+                </div>
+
+
+                @*<button class="nextBtn">
+                    <span class="btnText">Sign Up</span>
+                     <a asp-action="Create">Sign Up</a>
+                    <i class="uil uil-navigator"></i>
+                </button>*@
+            </div>
+
+          
+        </div>
+
+     
+    </form>
+</div>
+</section>
+            
+    <script src="assets/js/Registration.js"></script>
+    <!--  ************************* Registration form End Here ************************** -->
+   
+
+</html>
+
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

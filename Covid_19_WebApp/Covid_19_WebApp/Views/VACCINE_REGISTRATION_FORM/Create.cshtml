@@ -1,0 +1,392 @@
+﻿@model Covid_19_WebApp.Models.VACCINE_REGISTRATION_FORM
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section Styles{
+  
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="assets/images/icon-removebg-preview.png">
+    <link rel="shortcut icon" href="assets/images/fav.jpg">
+    <link rel="stylesheet" href="~/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/assets/css/fontawsom-all.min.css">
+    <link rel="stylesheet" href="~/assets/css/animate.css">
+    <link rel="stylesheet" type="text/css" href="~/assets/css/style.css" />
+    <link rel="stylesheet" href="~/assets/css/bootstrap.min.css.map">
+    <link rel="stylesheet" href="~/assets/css/style.css.map">
+}
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+
+
+@*<h1>Create</h1>
+
+<h4>RegistrationForm</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="VaccineID" class="control-label"></label>
+                <input asp-for="VaccineID" class="form-control" />
+                <span asp-validation-for="VaccineID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CitizenID" class="control-label"></label>
+                <input asp-for="CitizenID" class="form-control" />
+                <span asp-validation-for="CitizenID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="InjectionDate" class="control-label"></label>
+                <input asp-for="InjectionDate" class="form-control" />
+                <span asp-validation-for="InjectionDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RegisterDate" class="control-label"></label>
+                <input asp-for="RegisterDate" class="form-control" />
+                <span asp-validation-for="RegisterDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="InjectionNumber" class="control-label"></label>
+                <input asp-for="InjectionNumber" class="form-control" />
+                <span asp-validation-for="InjectionNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+*@
+
+
+
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title> Covid-19 Vaccine Portal</title>
+    <link rel="icon" href="assets/images/icon-removebg-preview.png">
+    <link rel="shortcut icon" href="assets/images/fav.jpg">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/fontawsom-all.min.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <script src="~/assets/js/jquery-3.2.1.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $("#SelectInjectionNumber").change(function(){
+                if ($(this).val() == "1") {
+                    $("#FirstInject").attr('disabled', 'disabled');
+                    $("#SecondInject").attr('disabled', 'disabled');
+                    $("#FirstInjectDate").attr('disabled', 'disabled');
+                    $("#SecondInjectDate").attr('disabled', 'disabled')
+                }
+                else if ($(this).val() == "2") { 
+               
+                    $("#SecondInject").attr('disabled', 'disabled');
+                    $("#SecondInjectDate").attr('disabled', 'disabled')
+                    $("#FirstInject").removeAttr('disabled');
+                    $("#FirstInjectDate").removeAttr('disabled');
+                }
+                else {
+                    $("#FirstInject").removeAttr('disabled');
+                    $("#SecondInject").removeAttr('disabled');
+                    $("#FirstInjectDate").removeAttr('disabled');
+                    $("#SecondInjectDate").removeAttr('disabled');
+                }
+            })
+        })
+    </script>
+</head>
+
+<body>
+
+   
+
+   <!--  ************************* Registration form Starts Here ************************** -->
+   <section class="Registrationbody">
+   <div class="Registrationcontainer">
+    <resheader>Registration</resheader>
+
+    <form asp-action="CreateForm">
+        <div class="form first">
+            <div class="details personal">
+                <span class="title">Personal Details</span>
+
+                <div class="fields">
+                    <div class="Resinput-field">
+                        <label>First Name</label>
+                        <input type="text" placeholder="Enter your first name" value=@GlobalVariables.citizen.FName required>
+                    </div>
+                    <div class="Resinput-field">
+                        <label>Last Name</label>
+                        <input type="text" placeholder="Enter your last name" value=@GlobalVariables.citizen.LName
+                        required>
+                    </div>
+                    
+                    <div class="Resinput-field">
+                        <label>Date of Birth</label>
+                        <input type="date" placeholder="Enter birth date" value=@GlobalVariables.DateOfBirth required>
+                    </div>
+
+                    <div class="Resinput-field">
+                        <label>Email</label>
+                        <input type="text" placeholder="Enter your email" value=@GlobalVariables.citizen.Email required>
+                    </div>
+
+                    <div class="Resinput-field">
+                        <label>Mobile Number</label>
+                        <input type="number" placeholder="Enter mobile number" value=@GlobalVariables.citizen.Phone required>
+                    </div>
+
+                    <div class="Resinput-field">
+                        <label>Gender</label>
+                        <select required>
+                            <option disabled>Select gender</option>
+                                      @{
+                                        if (GlobalVariables.citizen.Gender == "Male")
+                                        {
+                                              <option selected>Male</option>
+                                              <option>Female</option>                                                                                       
+                                        }      
+                                        else if (GlobalVariables.citizen.Gender == "Female")
+                                        {
+                                            <option>Male</option>
+                                            <option selected>Female</option>
+                                                                                                                                    
+                                        }
+                                      }
+                            
+                            
+                        </select>
+                    </div>
+
+                    
+                </div>
+            </div>
+
+            <div class="details ID">
+                <span class="title">Identity Details</span>
+
+                <div class="fields">
+                    <div class="Resinput-field">
+                        <label>ID Number</label>
+                        <input asp-for="CitizenID" type="number" placeholder="Enter ID number" value=@GlobalVariables.citizen.CitizenId required>
+                    </div>
+                    
+                    @*<div class="Resinput-field">
+                        <label>VaccineID</label>
+                        <input asp-for="VaccineID" type="number" placeholder="Enter Vaccine ID" value=@GlobalVariables.citizen.CitizenId required>
+                    </div>
+
+                    <div class="Resinput-field">
+                        <label>Injection Number</label>
+                        <input asp-for="InjectionNumber" type="text" placeholder="Enter Injection Number" value=@GlobalVariables.citizen.CitizenId required>
+                    </div>*@
+
+            
+                    <div class="Resinput-field">
+                        <label>Address</label>
+                        <input type="text" placeholder="Enter Current address" value=@GlobalVariables.citizen.Address required>
+                    </div>
+                    <div class="Resinput-field">
+                    </div>
+                </div>
+
+                <button class="nextBtn">
+                    <span class="btnText">Next</span>
+                    <i class="uil uil-navigator"></i>
+                </button>
+            </div> 
+        </div>
+             <div class="form second">
+            <div class="details address">
+                <span class="title">Vaccination registration information</span>
+
+                <div class="fields">
+                    <div class="Resinput-field">
+                        <label>Sign up for the injection</label>
+                        <select id="SelectInjectionNumber" asp-for="InjectionNumber" required>
+                            <option disabled selected>Select for injection</option>
+                            <option value="1">First injection</option>
+                            <option value="2">Second injection</option>
+                            <option value="3">Third injection</option>
+                        </select>
+                    </div>
+                            @{
+                                if(GlobalVariables.error == false)
+                                {
+                                    <div class="Resinput-field">
+                                        <label>Preferred vaccination date</label>
+                                        <input asp-for="InjectionDate" type="date" placeholder="Enter date" required>
+                                    </div>
+
+                                    <div class="Resinput-field">
+                                        <label>Vaccine name</label>
+                                        <select asp-for="VaccineID" required>
+                                            <option disabled selected>Select vaccine name</option>
+                                            <option value="1">AstraZeneca</option>
+                                            <option value="2">Pfizer</option>
+                                            <option value="3">Vero Cell</option>
+                                        </select>
+                                    </div>
+                                }
+                                else
+                                {
+                                    <div class="Resinput-field">
+                                        <label>Preferred vaccination date</label>
+                                        <input value="" asp-for="InjectionDate" type="date" placeholder="Enter date" required>
+                                    </div>
+
+                                    <div class="Resinput-field">
+                                        <label>Vaccine name</label>
+                                        <select value="" asp-for="VaccineID" required>
+                                            <option disabled selected>Select vaccine name</option>
+                                            <option value="1">AstraZeneca</option>
+                                            <option value="2">Pfizer</option>
+                                            <option value="3">Vero Cell</option>
+                                        </select>
+                                    </div>
+                                }
+                            }
+                    
+
+                    @*<div class="Resinput-field">
+                        <label>register date</label>
+                        <input asp-for="RegisterDate" type="date" placeholder="Enter date" required>
+                    </div>*@
+                                 
+                    @*<div class="Resinput-field">
+                        <label>Vaccine name</label>
+                        <select asp-for="VaccineID" required>
+                            <option disabled selected>Select vaccine name</option>
+                            <option value="1">AstraZeneca</option>
+                            <option value="2">Pfizer</option>
+                            <option value="3">Vero Cell</option>
+                        </select>
+                    </div>*@
+                </div>
+            </div>
+
+            <div class="History_details">
+                <span class="title">History of 1st injection (option)</span>
+
+                <div class="fields">
+                    <div class="Resinput-field">
+                        <label>1st injection vaccine name</label>
+                        <select id="FirstInject">
+                            <option disabled selected>Select vaccine name</option>
+                            <option>AstraZeneca</option>
+                            <option>Pfizer</option>
+                            <option>Vero Cell</option>
+                        </select>
+                    </div>
+
+                    <div class="Resinput-field">
+                        <label>Date of injection</label>
+                        <input id="FirstInjectDate" type="date" placeholder="Select Date of injection">
+                    </div>
+
+                    <div class="Resinput-field">
+                        
+                    </div>
+                    
+                </div>
+
+                
+            </div>
+        <div class="History_details">
+            <span class="title">History of 2nd injection (option)</span>
+                    <div class="fields">
+                        <div class="Resinput-field">
+                            <label>2nd injection vaccine name</label>
+                            <select id="SecondInject">
+                                <option disabled selected>Select vaccine name</option>
+                                <option>AstraZeneca</option>
+                                <option>Pfizer</option>
+                                <option>Vero Cell</option>
+                            </select>
+                        </div>
+
+                        <div class="Resinput-field">
+                            <label>Date of injection</label>
+                            <input id="SecondInjectDate" type="date" placeholder="Select Date of injection">
+                        </div>
+                        <div class="Resinput-field">
+                        
+                        </div>
+                
+                </div>
+                    <div class="buttons">
+                        <div class="backBtn">
+                            <i class="uil uil-navigator"></i>
+                            <span class="btnText">Back</span>
+                        </div>
+                    
+                        <button class="form-group">
+                            <span class="btnText">Submit</span>
+                            <i class="uil uil-navigator"></i>
+                        </button>
+
+                    
+                    </div>
+               </div>
+        </div>
+       
+        
+
+    </form>
+  @if (ViewBag.Message != null)
+            {
+                <script type="text/javascript">
+window.onload = function() {
+    alert("@ViewBag.Message");
+};
+                </script>
+                ViewBag.Message = null;
+            }
+
+
+     
+
+</div>
+</section>
+            
+    <script src="~/assets/js/Registration.js"></script>
+    
+
+</body>
+
+<script src="~/assets/js/jquery-3.2.1.min.js"></script>
+<script src="~/assets/js/popper.min.js"></script>
+<script src="~/assets/js/bootstrap.min.js"></script>
+<script src="~/assets/plugins/scroll-fixed/jquery-scrolltofixed-min.js"></script>
+<script src="~/assets/js/script.js"></script>
+
+
+</html>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+

@@ -1,0 +1,84 @@
+﻿@model Covid_19_WebApp.Models.Vaccine_Record
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Create</h1>
+
+<h4>Vaccine_Record</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="CitizenID" class="control-label"></label>
+                <input asp-for="CitizenID" class="form-control" />
+                <span asp-validation-for="CitizenID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Number_Injection" class="control-label"></label>
+                <input asp-for="Number_Injection" class="form-control" />
+                <span asp-validation-for="Number_Injection" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FirstDate" class="control-label"></label>
+                <input asp-for="FirstDate" class="form-control" />
+                <span asp-validation-for="FirstDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FirstVaccine" class="control-label"></label>
+                <input asp-for="FirstVaccine" class="form-control" />
+                <span asp-validation-for="FirstVaccine" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SecondDate" class="control-label"></label>
+                <input asp-for="SecondDate" class="form-control" />
+                <span asp-validation-for="SecondDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SecondVaccine" class="control-label"></label>
+                <input asp-for="SecondVaccine" class="form-control" />
+                <span asp-validation-for="SecondVaccine" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ThirdDate" class="control-label"></label>
+                <input asp-for="ThirdDate" class="form-control" />
+                <span asp-validation-for="ThirdDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ThirdVaccine" class="control-label"></label>
+                <input asp-for="ThirdVaccine" class="form-control" />
+                <span asp-validation-for="ThirdVaccine" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="First_NurseID" class="control-label"></label>
+                <input asp-for="First_NurseID" class="form-control" />
+                <span asp-validation-for="First_NurseID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Second_NurseID" class="control-label"></label>
+                <input asp-for="Second_NurseID" class="form-control" />
+                <span asp-validation-for="Second_NurseID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Third_NurseID" class="control-label"></label>
+                <input asp-for="Third_NurseID" class="form-control" />
+                <span asp-validation-for="Third_NurseID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
