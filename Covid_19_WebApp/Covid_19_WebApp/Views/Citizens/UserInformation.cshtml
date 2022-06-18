@@ -1,0 +1,109 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section Styles{
+  
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="assets/images/icon-removebg-preview.png">
+    <link rel="shortcut icon" href="assets/images/fav.jpg">
+    <link rel="stylesheet" href="~/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/assets/css/fontawsom-all.min.css">
+    <link rel="stylesheet" href="~/assets/css/animate.css">
+    <link rel="stylesheet" type="text/css" href="~/assets/css/style.css" />
+    <link rel="stylesheet" href="~/assets/css/bootstrap.min.css.map">
+    <link rel="stylesheet" href="~/assets/css/style.css.map">
+}
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+
+<!doctype html>
+<html lang="en">
+
+<body>
+
+
+
+    
+    <!-- ################# Our Team Starts Here#######################--->
+
+      <!--  ************************* Page Title Starts Here ************************** -->
+               @*<div class="page-nav no-margin row">
+                   <div class="container">
+                       <div class="row">
+                           <h2>Your Profile</h2>
+                       </div>
+                   </div>
+               </div>*@
+       
+         <!-- ######## Page  Title End ####### -->
+    
+
+   
+        <!--  ************************* Profile start Here ************************** -->
+        <section class="Profilebody">
+            <div class="Profilecontainer">
+                <div class="Profiletitle"> 
+                   <h3>INFORMATION</h3>
+                </div>
+              
+               <form action="#">
+                  <div class="Userimage">
+                      <img src="~/assets/images/userimage.png" alt="">
+                  </div>
+
+                  <table class="usertable">
+                    <tbody>
+                        <tr>
+                            <td>
+                               Full Name:
+                            </td>
+                            <td>
+                               @GlobalVariables.citizen.FName @GlobalVariables.citizen.LName
+                           </td>
+                        </tr>
+                        <tr>
+                            <td>
+                               Email: 
+                            </td>
+                            <td>
+                                @GlobalVariables.citizen.Email
+                           </td>
+                        </tr>
+                        <tr>
+                            <td>
+                               Phone: 
+                            </td>
+                            <td>
+                                @GlobalVariables.citizen.Phone
+                           </td>
+                        </tr>
+                    </tbody>                          
+                  </table>
+
+                  <div class="usersearch">
+                    <li><a href="@Url.Action("VaccinationHistory", "Citizens")">Obtain your Covid-19 vaccine certificate</a></li>
+                  </div> 
+                  <div class="usersearch">
+                    <li><a href="@Url.Action("CitizenInformation", "Citizens")">Your Detail Information</a></li>
+                  </div> 
+               </form>
+            </div>
+        </section>     
+        <!-- ######## Profile End ####### -->
+
+</body>
+
+<script src="~/assets/js/jquery-3.2.1.min.js"></script>
+<script src="~/assets/js/popper.min.js"></script>
+<script src="~/assets/js/bootstrap.min.js"></script>
+<script src="~/assets/plugins/scroll-fixed/jquery-scrolltofixed-min.js"></script>
+<script src="~/assets/js/script.js"></script>
+
+
+</html>

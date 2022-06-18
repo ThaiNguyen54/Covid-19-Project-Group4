@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="assets/css/fontawsom-all.min.css">
     <link rel="stylesheet" href="assets/css/animate.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css
+">
 </head>
 <body>
      <!-- ################# Header Starts Here #######################--->
@@ -46,14 +48,14 @@
                     <div id="menu" class="col-md-9 d-none d-md-block nav-item">
                         <ul>
                             <li><a href="@Url.Action("index", "Home")">Home</a></li>
-                            <li><a href="@Url.Action("Create", "VACCINE_REGISTRATION_FORM")">Vaccine Registration</a></li>
-                            <li><a href="Search.html">Search</a></li>
-                            <li><a href="contact_us.html">Contact Us</a></li>
+                            
+                            @*<li><a href="Search.html">Search</a></li>*@
+                            <li><a href="@Url.Action("ContactUs","Home")">Contact Us</a></li>
 
                             @{
                                 if (GlobalVariables.isLogin == false)
                                 {
-                                    <li><a href="@Url.Action("Create", "Citizens")">Sign Up</a></li>
+                                    //<li><a href="@Url.Action("Create", "Citizens")">Sign Up</a></li>
                                     <li> <form method="get" action="@Url.Action("Login", "Citizens")">
                                             <button type="submit">Login</button>
                                         </form> 
@@ -66,12 +68,15 @@
                                     //        <button type="submit">Logout</button>
                                     //    </form> 
                                     //</li>
+                                    <li><a href="@Url.Action("Create", "VACCINE_REGISTRATION_FORM")">Vaccine Registration</a></li>
+                                    <li><a href="@Url.Action("VaccinationHistory", "Citizens")">Search</a></li>
+
                                     <li class="dropdown">
                                         <button class="dropbtn">Hello @GlobalVariables.citizen.FName
                                             <i class="fa fa-caret-down"></i>
                                         </button>
                                         <div class="dropdown-content">
-                                            <a href="@Url.Action("VaccinationHistory", "Citizens")">Covid Vaccine Passport</a>
+                                            <a href="@Url.Action("UserInformation", "Citizens")">Information</a>
                                             <a href="@Url.Action("LogOut", "Citizens")">Log out</a>
                                         </div>
                                     </li>

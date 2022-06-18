@@ -368,7 +368,7 @@ header .header-nav .nav-item ul li form button {
     }
 
     /* Add a green background color to navbar links on hover */
-    .header-nav a:hover, .dropdown:hover .dropbtn {
+    .header-nav .dropdown:hover .dropbtn {
         background-color: forestgreen;
     }
 

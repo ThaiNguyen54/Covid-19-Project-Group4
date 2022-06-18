@@ -68,7 +68,9 @@ namespace Covid_19_WebApp.Controllers
                 try
                 {
                     await _context.SaveChangesAsync();
-                    return RedirectToAction(nameof(Index));
+                    GlobalVariables.isRegisterSuccessfully = true;
+                    ViewBag.Message = "Register Successfully! You Can Login Into The Website Right Now.";
+                    return RedirectToAction("Login", "Citizens");
                 }
                 catch
                 {
@@ -218,6 +220,7 @@ namespace Covid_19_WebApp.Controllers
                 GlobalVariables.month = GlobalVariables.citizen.Bdate.Month;
                 GlobalVariables.year = GlobalVariables.citizen.Bdate.Year;
 
+
                 string day_str = "";
                 string month_str = "";
 
@@ -327,14 +330,67 @@ namespace Covid_19_WebApp.Controllers
             dr = com.ExecuteReader();
             if (dr.Read())
             {
-                GlobalVariables.vaccineRecord.FirstDate = dr.GetDateTime(3);
-                GlobalVariables.vaccineRecord.FirstVaccine = dr.GetString(4);
-                GlobalVariables.vaccineRecord.SecondDate = dr.GetDateTime(5);
-                GlobalVariables.vaccineRecord.SecondVaccine = dr.GetString(6);
-                GlobalVariables.vaccineRecord.ThirdDate = dr.GetDateTime(7);
-                GlobalVariables.vaccineRecord.ThirdVaccine = dr.GetString(8);
+                if (dr.IsDBNull(3) == false)
+                {
+                    GlobalVariables.vaccineRecord.FirstDate = dr.GetDateTime(3);
+                }
+                else
+                {
+                    GlobalVariables.vaccineRecord.FirstDate = null;
+                }
+
+                if(dr.IsDBNull(4) == false)
+                {
+                    GlobalVariables.vaccineRecord.FirstVaccine = dr.GetString(4);
+                }
+                else
+                {
+                    GlobalVariables.vaccineRecord.FirstDate = null;
+                }
+
+                if(dr.IsDBNull(5) == false)
+                {
+                    GlobalVariables.vaccineRecord.SecondDate = dr.GetDateTime(5);
+                }
+                else
+                {
+                    GlobalVariables.vaccineRecord.SecondDate = null;
+                }
+
+                if (dr.IsDBNull(6) == false)
+                {
+                    GlobalVariables.vaccineRecord.SecondVaccine = dr.GetString(6);
+                }
+                else
+                {
+                    GlobalVariables.vaccineRecord.SecondVaccine = null;
+                }
+
+                if(dr.IsDBNull(7) == false)
+                {
+                    GlobalVariables.vaccineRecord.ThirdDate = dr.GetDateTime(7);
+                }
+                else
+                {
+                    GlobalVariables.vaccineRecord.ThirdDate = null;
+                }
+
+                if(dr.IsDBNull(8) == false)
+                {
+                    GlobalVariables.vaccineRecord.ThirdVaccine = dr.GetString(8);
+                }
+                else
+                {
+                    GlobalVariables.vaccineRecord.ThirdVaccine = null;
+                }
+
             }
 
+            return View();
+        }
+
+        public IActionResult UserInformation()
+        {
             return View();
         }
     }

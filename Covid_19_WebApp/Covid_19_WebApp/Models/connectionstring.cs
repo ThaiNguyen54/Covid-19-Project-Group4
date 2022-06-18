@@ -2,12 +2,11 @@
 {
     public class connectionstring
     {
-        private string SqlServer = @""
+        private string SqlServer = @"";
 
 
         public string GetConnectionString()
         {
-
             return this.SqlServer;
         }
     }

@@ -16,6 +16,7 @@
     <link rel="stylesheet" type="text/css" href="~/assets/css/style.css" />
     <link rel="stylesheet" href="~/assets/css/bootstrap.min.css.map">
     <link rel="stylesheet" href="~/assets/css/style.css.map">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 }
 
 @*<h1>Login</h1>
@@ -135,10 +136,20 @@
         
                 </div>
          	</div>
+
+             @if(GlobalVariables.isRegisterSuccessfully == true)
+        {
+            <script type="text/javascript">
+window.onload = function() {
+    alert("Register Successfully! You Can Login Into The Website Right Now.");
+};
+                </script>
+                GlobalVariables.isRegisterSuccessfully = false;
+        }
+
+
      </section>
      <script src="assets/js/loginpage.js"></script>
-   
-        
 
     </footer>
    

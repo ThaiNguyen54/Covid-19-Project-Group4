@@ -48,8 +48,8 @@
                         <div id="menu" class="col-md-9 d-none d-md-block nav-item">
                             <ul>
                                 <li><a href="@Url.Action("ManagerHome", "Home")">Home</a></li>
-                                <li><a href="Search.html">Search</a></li>
-                                <li><a href="#">Contact Us</a></li>
+                                <li><a href="@Url.Action("Index", "Vaccines")">Vaccine</a></li>
+                                <li><a href="@Url.Action("Index", "VACCINE_REGISTRATION_FORM")">Vaccination Registration</a></li>
                                 <li><a href="@Url.Action("Index", "Citizens")">Citizens</a></li>
                                 <li><a href="@Url.Action("Index", "Nurses")">Nurse</a></li>
                                  <li class="dropdown">
@@ -57,9 +57,13 @@
                                             <i class="fa fa-caret-down"></i>
                                         </button>
                                         <div class="dropdown-content">
+                                            <a href="@Url.Action("Index", "Warehouse_Vaccine")">Stock of Vaccines</a>
+                                            <a href="@Url.Action("GetChart_Statistic_Number_Of_Citizen_Each_Month", "Managers")">Monthly Statistic</a>
+                                            <a href="@Url.Action("GetChart_Statistic_Vaccine_For_InjectionNumber", "Managers")">Vaccination Statistic</a>
                                             <a href="@Url.Action("LogOut", "Managers")">Log out</a>
+                                            
                                         </div>
-                                    </li>
+                                 </li>
                             
                             
                                 @*<div class="usericon">
