@@ -56,7 +56,8 @@ Create table Nurse
 	Phone varchar(100),
 	Password varchar(100),
 	Email varchar(100),
-	Age int
+	Age int,
+	Gender varchar(100)
 )
 
 create table SUPPLIER
@@ -88,6 +89,7 @@ Create table MANAGER
 	Email varchar(100),
 	Age int
 )
+
 
 Create table VACCINE
 (
