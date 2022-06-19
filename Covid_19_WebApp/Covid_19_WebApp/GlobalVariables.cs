@@ -20,6 +20,8 @@ namespace Covid_19_WebApp
         public static bool error = false;
         public static int[] Month;
         public static int[] NumberOfCitizen;
+        public static int year_stat;
+        public static bool NotFound = false;
     }
 
 }

@@ -2,9 +2,17 @@
 
 @{
     ViewData["Title"] = "Details";
-    Layout = "~/Views/Shared/_ManagerLayout.cshtml";
-}
+   if(GlobalVariables.isManagerLogin == true)
+    {
+        Layout = "~/Views/Shared/_ManagerLayout.cshtml";
+    }
 
+    if(GlobalVariables.isLogin == true)
+    {
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+
+}
 @section Styles{
   
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">

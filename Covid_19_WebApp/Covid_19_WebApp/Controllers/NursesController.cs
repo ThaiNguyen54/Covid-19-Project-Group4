@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Covid_19_WebApp.Data;
 using Covid_19_WebApp.Models;
+using Microsoft.Data.SqlClient;
 
 namespace Covid_19_WebApp.Controllers
 {
@@ -158,6 +159,49 @@ namespace Covid_19_WebApp.Controllers
         private bool NurseExists(int id)
         {
           return (_context.Nurse?.Any(e => e.NurseID == id)).GetValueOrDefault();
+        }
+
+        SqlConnection con = new SqlConnection();
+        SqlCommand com = new SqlCommand();
+        SqlDataReader dr;
+
+        void connectionString()
+        {
+            connectionstring connectionString = new connectionstring();
+            con.ConnectionString = connectionString.GetConnectionString();
+        }
+
+        public IActionResult SearchNurse(string NurseName)
+        {
+            List<Nurse> foundNurse = new List<Nurse>();
+            connectionString();
+            con.Open();
+            com.Connection = con;
+            com.CommandText = "Select * from Nurse where FName like " + "'%" + NurseName + "%'";
+            dr = com.ExecuteReader();
+            if (dr.Read())
+            {
+                foundNurse.Add(new Nurse
+                {
+                    NurseID = (int)dr.GetInt32(0),
+                    ManagerID = dr.GetInt32(1),
+                    FName = dr.GetString(2),
+                    LName = dr.GetString(3),
+                    Bdate = dr.GetDateTime(4),
+                    Address = dr.GetString(5),
+                    Phone = dr.GetString(6),
+                    Email = dr.GetString(8),
+                    Gender = dr.GetString(9)
+                });
+                con.Close();
+                return View("Index", foundNurse);
+            }
+            else
+            {
+                GlobalVariables.NotFound = true;
+                return RedirectToAction("Index", "Nurses", "Not Found");
+            }
+            //return RedirectToAction("ManagerHome", "Home");
         }
     }
 }

@@ -290,6 +290,30 @@ namespace Covid_19_WebApp.Controllers
             }
         }
 
+        public ActionResult GetRegistrationForm()
+        {
+            List<VACCINE_REGISTRATION_FORM> foundForm = new List<VACCINE_REGISTRATION_FORM>();
+            connectionString();
+            con.Open();
+            com.Connection = con;
+            com.CommandText = "Select * from VACCINE_REGISTRATION_FORM where CitizenID = '" + GlobalVariables.citizen.CitizenId + "'";
+            dr = com.ExecuteReader();
+            while (dr.Read())
+            {
+                foundForm.Add(new VACCINE_REGISTRATION_FORM
+                {
+                    FormID = (int)dr.GetInt32(0),
+                    CitizenID = dr.GetInt32(1),
+                    VaccineID = dr.GetInt32(2),
+                    InjectionDate = dr.GetDateTime(3),
+                    RegisterDate = dr.GetDateTime(4),
+                    InjectionNumber = dr.GetString(5)
+                });
+            }
+            con.Close();
+            return View("GetRegistrationForm", foundForm);
+        }
+
         public IActionResult SearchCitzen(string SearchTerm)
         {
             List<Citizen> foundCitizen = new List<Citizen>();
@@ -316,6 +340,7 @@ namespace Covid_19_WebApp.Controllers
             }
             else
             {
+                GlobalVariables.NotFound = true;
                 return RedirectToAction("Index", "Citizens", "Not Found");
             }
             //return RedirectToAction("ManagerHome", "Home");

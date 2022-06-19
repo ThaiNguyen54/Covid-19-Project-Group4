@@ -110,3 +110,12 @@
 }
     </tbody>
 </table>
+@if(GlobalVariables.NotFound == true)
+{
+    <script type="text/javascript">
+        window.onload = function() {
+        alert("Citizen Not Found");
+        };    
+    </script>
+    GlobalVariables.NotFound = false;
+}

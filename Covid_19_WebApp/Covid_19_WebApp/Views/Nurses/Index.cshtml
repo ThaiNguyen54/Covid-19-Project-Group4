@@ -24,11 +24,17 @@
 <br/>
 <br/>
 
-<h1>Index</h1>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
+<center>
+    <h1>Nurse Information</h1>
+</center>
+
+<form asp-action="SearchNurse">
+    <div>
+        <input name="NurseName" class="form-group" placeholder="search for nurse information"></input>
+        <input type="submit" value="Search" class="btn btn-primary"></input>
+    </div>
+</form>
 <table class="table">
     <thead>
         <tr>
@@ -101,3 +107,13 @@
 }
     </tbody>
 </table>
+
+@if(GlobalVariables.NotFound == true)
+{
+    <script type="text/javascript">
+        window.onload = function() {
+        alert("Nurse Not Found");
+        };
+    </script>
+    GlobalVariables.NotFound = false;
+}

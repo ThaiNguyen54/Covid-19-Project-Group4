@@ -218,20 +218,23 @@ namespace Covid_19_WebApp.Controllers
             return RedirectToAction("ManagerHome", "Home");
         }
 
-        public void Statistic_Number_Of_Citizen_Each_Month()
+        public void Statistic_Number_Of_Citizen_Each_Month(int year)
         {
             List<int> Month = new List<int>();
             List<int> NumberOfCitizen = new List<int>();
             List<DataPoint> dataPoints = new List<DataPoint>();
             connectionstring constring = new connectionstring();
             DataTable data = new DataTable();
-            string query = "select @month as 'Month', COUNT(*) as 'Number of Citizen' from VACCINE_RECORD where MONTH(FirstDate) = @month or MONTH(SecondDate) = @month or MONTH(ThirdDate) = @month";
+            //string query = "select @month as 'Month', COUNT(*) as 'Number of Citizen' from VACCINE_RECORD where MONTH(FirstDate) = @month or MONTH(SecondDate) = @month or MONTH(ThirdDate) = @month";
+            string query = "select @month as 'Month', COUNT(*) as 'Number of Citizen' from VACCINE_RECORD where (MONTH(FirstDate) = @month or MONTH(SecondDate) = @month or MONTH(ThirdDate) = @month) and(YEAR(FirstDate) = @year or YEAR(SecondDate) = @year or YEAR(ThirdDate) = @year)";
+
             using (SqlConnection connection = new SqlConnection(constring.GetConnectionString()))
             {
                 for (int i = 1; i <= 12; i++)
                 {
                     SqlCommand command = new SqlCommand(query, connection);
                     command.Parameters.AddWithValue("@month", i);
+                    command.Parameters.AddWithValue("@year", year);
                     connection.Open();
                     SqlDataReader reader = command.ExecuteReader();
                     while (reader.Read())
@@ -246,9 +249,10 @@ namespace Covid_19_WebApp.Controllers
             ViewBag.DataPoints = JsonConvert.SerializeObject(dataPoints);
         }
 
-        public IActionResult GetChart_Statistic_Number_Of_Citizen_Each_Month()
+        public IActionResult GetChart_Statistic_Number_Of_Citizen_Each_Month(int year)
         {
-            Statistic_Number_Of_Citizen_Each_Month();
+            Statistic_Number_Of_Citizen_Each_Month(year);
+            ViewBag.year = year;
             return View();
         }
 

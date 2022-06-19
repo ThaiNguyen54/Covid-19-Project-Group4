@@ -2,14 +2,37 @@
 
 @{
     ViewData["Title"] = "Edit";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/Shared/_ManagerLayout.cshtml";
 }
 
-<h1>Edit</h1>
+@section Styles{
+  
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="assets/images/icon-removebg-preview.png">
+    <link rel="shortcut icon" href="assets/images/fav.jpg">
+    <link rel="stylesheet" href="~/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/assets/css/fontawsom-all.min.css">
+    <link rel="stylesheet" href="~/assets/css/animate.css">
+    <link rel="stylesheet" type="text/css" href="~/assets/css/style.css" />
+    <link rel="stylesheet" href="~/assets/css/bootstrap.min.css.map">
+    <link rel="stylesheet" href="~/assets/css/style.css.map">
+}
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
 
-<h4>Vaccine_Record</h4>
+<center>
+    <h1>Edit Vaccine Record</h1>
+</center>
+
+
+<h4>Vaccine Record</h4>
 <hr />
-<div class="row">
+<div>
     <div class="col-md-4">
         <form asp-action="Edit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>

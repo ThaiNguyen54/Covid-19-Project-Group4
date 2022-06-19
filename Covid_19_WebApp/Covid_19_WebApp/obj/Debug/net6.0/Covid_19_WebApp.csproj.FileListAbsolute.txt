@@ -254,12 +254,7 @@ D:\Home Work\Database Analyze and Design\Final Project\Covid_19_WebApp\Covid_19_
 D:\Home Work\Database Analyze and Design\Final Project\Covid_19_WebApp\Covid_19_WebApp\bin\Debug\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
 D:\Home Work\Database Analyze and Design\Final Project\Covid_19_WebApp\Covid_19_WebApp\bin\Debug\net6.0\runtimes\win-arm\lib\net6.0\dotnet-aspnet-codegenerator-design.exe
 D:\Home Work\Database Analyze and Design\Final Project\Covid_19_WebApp\Covid_19_WebApp\bin\Debug\net6.0\runtimes\win-arm64\lib\net6.0\dotnet-aspnet-codegenerator-design.exe
-D:\Home Work\Database Analyze and Design\Final Project\Covid_19_WebApp\Covid_19_WebApp\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
-D:\Home Work\Database Analyze and Design\Final Project\Covid_19_WebApp\Covid_19_WebApp\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
-D:\Home Work\Database Analyze and Design\Final Project\Covid_19_WebApp\Covid_19_WebApp\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
 D:\Home Work\Database Analyze and Design\Final Project\Covid_19_WebApp\Covid_19_WebApp\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
-D:\Home Work\Database Analyze and Design\Final Project\Covid_19_WebApp\Covid_19_WebApp\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-D:\Home Work\Database Analyze and Design\Final Project\Covid_19_WebApp\Covid_19_WebApp\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
 D:\Home Work\Database Analyze and Design\Final Project\Covid_19_WebApp\Covid_19_WebApp\obj\Debug\net6.0\Covid_19_WebApp.csproj.CopyComplete
 D:\Home Work\Database Analyze and Design\Final Project\Covid_19_WebApp\Covid_19_WebApp\bin\Debug\net6.0\System.Web.Razor.dll
 D:\Home Work\Database Analyze and Design\Final Project\Covid_19_WebApp\Covid_19_WebApp\bin\Debug\net6.0\System.Web.Helpers.dll
@@ -268,3 +263,8 @@ D:\Home Work\Database Analyze and Design\Final Project\Covid_19_WebApp\Covid_19_
 D:\Home Work\Database Analyze and Design\Final Project\Covid_19_WebApp\Covid_19_WebApp\bin\Debug\net6.0\System.Web.WebPages.dll
 D:\Home Work\Database Analyze and Design\Final Project\Covid_19_WebApp\Covid_19_WebApp\bin\Debug\net6.0\Microsoft.Web.Infrastructure.dll
 D:\Home Work\Database Analyze and Design\Final Project\Covid_19_WebApp\Covid_19_WebApp\bin\Debug\net6.0\System.Web.Mvc.dll
+D:\Home Work\Database Analyze and Design\Final Project\Covid_19_WebApp\Covid_19_WebApp\bin\Debug\net6.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+D:\Home Work\Database Analyze and Design\Final Project\Covid_19_WebApp\Covid_19_WebApp\bin\Debug\net6.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+D:\Home Work\Database Analyze and Design\Final Project\Covid_19_WebApp\Covid_19_WebApp\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+D:\Home Work\Database Analyze and Design\Final Project\Covid_19_WebApp\Covid_19_WebApp\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+D:\Home Work\Database Analyze and Design\Final Project\Covid_19_WebApp\Covid_19_WebApp\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll

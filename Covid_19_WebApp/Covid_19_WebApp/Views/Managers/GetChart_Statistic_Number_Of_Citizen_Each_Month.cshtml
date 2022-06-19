@@ -24,6 +24,16 @@
 <br/>
 <br/>
 <br/>
+
+<center>
+	<form asp-action="GetChart_Statistic_Number_Of_Citizen_Each_Month">
+		<div>
+			<input name="year" class="form-group" placeholder="Enter a year"></input>
+			<input type="submit" value="OK" class="btn btn-primary"></input>
+		</div>
+	</form>
+</center>
+
  
 <!DOCTYPE HTML>
 <html>
@@ -35,7 +45,7 @@ var chart = new CanvasJS.Chart("chartContainer", {
 	animationEnabled: true,
 	theme: "light2", // "light1", "light2", "dark1", "dark2"
 	title: {
-		text: "Number of Citizens Get Covid-19 Vaccination In Each Month"
+        text: "Number of Citizens Get Covid-19 Vaccination In Each Month " + @Convert.ToString(ViewBag.year)
 	},
 	axisX:{
 	   title: "Month"
